@@ -1,0 +1,11 @@
+.quote-box {
+  width: 50%;
+  background: white;
+  border-radius: 5px;
+  padding: 30px;
+  margin: 10px;
+}
+
+.quotation {
+  font-size: 25px;
+}

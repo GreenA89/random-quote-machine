@@ -1,26 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import QuoteMachine from './components/quote-machine/quote-machine';
+import quotes from './components/quotes/quotes';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = () => {
+  const [index, setIndex] = useState(0);
+  
+  const newState = () => setIndex(Math.floor(Math.random() * (7 - 0)) + 0);
+
+    return (
+      <div 
+        className='background' 
+        style={{background: quotes[index].color, transition: 'background 1.0s ease'}}>
+          <QuoteMachine index={index} newState={newState} />
+          <p className='credit'>by Alex Green</p>
+      </div>
+    );
 }
 
 export default App;

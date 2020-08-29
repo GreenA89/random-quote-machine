@@ -1,0 +1,21 @@
+.socials {
+    display: flex;
+    justify-content: space-around;
+    width: 17%;
+}
+
+.button {
+    border-radius: 5px;
+    border: 0px;
+    color: white;
+    height: 100%;
+}
+  
+.button:hover {
+    cursor: pointer; 
+    filter: brightness(150%);
+}
+  
+.social {
+    width: 40%;
+}
